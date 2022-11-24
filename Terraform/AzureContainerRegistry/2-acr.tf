@@ -8,7 +8,7 @@ resource "azurerm_container_registry" "Terra-acr" {
   name                = var.acrName
   resource_group_name = var.resourceGroupName
   location            = var.azureRegion
-  sku                 = "Standard"
+  sku                 = "standard"
   admin_enabled       = false
   
 }
