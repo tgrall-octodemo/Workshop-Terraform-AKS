@@ -9,7 +9,7 @@ variable "azureRegion" {
 #  Resource Group Name
 variable "resourceGroupName" {
   type    = string
-  default = "rg-tgrall-demo-tf"
+  default = "rg-tgrall-demo-tf-2"
 }
 
 
