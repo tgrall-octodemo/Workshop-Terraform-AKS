@@ -1,10 +1,6 @@
-name: 'Terraform Create'
+name: 'Terraform Destroy'
 
 on:
-  # push:
-  #   branches:
-  #   - main
-  # pull_request:
   workflow_dispatch:
 
 jobs:
@@ -59,4 +55,4 @@ jobs:
     - name: Terraform Apply
       run: |
         cd ./Terraform/Pipeline-GH
-        terraform apply -var 'AzureSubscriptionID=${{ secrets.SUBSCRIPTIONID }}' -var 'AzureClientSecret=${{ secrets.CLIENTSECRET }}' -var 'AzureClientID=${{ secrets.CLIENTID }}' -var 'AzureTenandID=${{ secrets.TENANTID }}' -auto-approve -lock=false
+        terraform destroy -var 'AzureSubscriptionID=${{ secrets.SUBSCRIPTIONID }}' -var 'AzureClientSecret=${{ secrets.CLIENTSECRET }}' -var 'AzureClientID=${{ secrets.CLIENTID }}' -var 'AzureTenandID=${{ secrets.TENANTID }}' -auto-approve -lock=false
